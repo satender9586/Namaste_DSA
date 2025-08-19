@@ -1,15 +1,4 @@
-// count digit
 
-function countDigit(digit) {
-  let valu = digit;
-  let count = 0;
-  while (valu > 0) {
-    valu = Math.floor(valu / 10);
-    console.log("count");
-  }
-}
-
-// countDigit(1234);
 
 // check number is palindrom
 
