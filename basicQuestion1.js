@@ -129,3 +129,46 @@ function findAnagram(str1, str2) {
   return Object.values(obj).every((val) => val === 0);
 }
 // console.log(findAnagram("listen", "silens"));
+
+// Write a function to count the frequency of each character in a string and return it as an object.s
+
+function frequencyObj(str){
+    const obj ={}
+    for(let val of str){
+        if(!obj[val]){
+            obj[val]=1
+        }else{
+            obj[val]=obj[val]+1
+        }
+    }
+    return obj
+
+}
+
+// console.log(frequencyObj("hello"))
+
+// Given an object, invert its keys and values.
+
+// {a:1, b:2, c:3} // → {1:"a", 2:"b", 3:"c"}
+
+function invert(obj){
+    const newObj = {}
+    for(let char in obj){
+        if(!newObj[obj[char]]){
+            newObj[obj[char]] = char
+        }
+    }
+    console.log(newObj)
+}
+// invert({a:1, b:2, c:3} )
+
+
+// Merge two objects without using Object.assign or spread (...).
+
+function marget(){
+    const obj ={name:"amit",age:50}
+    const newobj = Object.assign({hobbies:"cirket"}, obj)
+    console.log(newobj)
+}
+
+marget()
