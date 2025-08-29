@@ -132,17 +132,16 @@ function findAnagram(str1, str2) {
 
 // Write a function to count the frequency of each character in a string and return it as an object.s
 
-function frequencyObj(str){
-    const obj ={}
-    for(let val of str){
-        if(!obj[val]){
-            obj[val]=1
-        }else{
-            obj[val]=obj[val]+1
-        }
+function frequencyObj(str) {
+  const obj = {};
+  for (let val of str) {
+    if (!obj[val]) {
+      obj[val] = 1;
+    } else {
+      obj[val] = obj[val] + 1;
     }
-    return obj
-
+  }
+  return obj;
 }
 
 // console.log(frequencyObj("hello"))
@@ -151,24 +150,124 @@ function frequencyObj(str){
 
 // {a:1, b:2, c:3} // → {1:"a", 2:"b", 3:"c"}
 
-function invert(obj){
-    const newObj = {}
-    for(let char in obj){
-        if(!newObj[obj[char]]){
-            newObj[obj[char]] = char
-        }
+function invert(obj) {
+  const newObj = {};
+  for (let char in obj) {
+    if (!newObj[obj[char]]) {
+      newObj[obj[char]] = char;
     }
-    console.log(newObj)
-}
-// invert({a:1, b:2, c:3} )
-
-
-// Merge two objects without using Object.assign or spread (...).
-
-function marget(){
-    const obj ={name:"amit",age:50}
-    const newobj = Object.assign({hobbies:"cirket"}, obj)
-    console.log(newobj)
+  }
+  console.log(newObj);
 }
 
-marget()
+// Rotate an array k times to the right.
+// 👉 Example: [1,2,3,4,5], k=2 → [4,5,1,2,3]
+
+function rotate(arr, k) {
+  const lengthofnotrotate = arr.length - k;
+  const ar = arr.slice(lengthofnotrotate);
+  const ans = [...ar].concat(arr.slice(0, lengthofnotrotate));
+  console.log(ans);
+}
+// rotate([1,2,3,4,5],3)
+
+// Find the intersection of two arrays (common elements).
+// Input: arr1 = [1,2,3,4], arr2 = [3,4,5,6]
+
+// Output: [3,4]
+
+function findCommon(arr1, arr2) {
+  const newarr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] == arr2[j]) {
+        newarr.push(arr1[i]);
+      }
+    }
+  }
+  return newarr;
+}
+// console.log(findCommon([10,20,30], [30,40,50]));
+
+// Create a function counter() that uses closures to return increment and decrement functions. example
+
+function counter() {
+  let count = 0;
+
+  function icrement() {
+    count++;
+    return count;
+  }
+  function decrement() {
+    count--;
+    return count;
+  }
+
+  return { icrement, decrement };
+}
+
+// const myCount = counter()
+// console.log(myCount.icrement())
+// console.log(myCount.icrement())
+// console.log(myCount.icrement())
+// console.log(myCount.icrement())
+// console.log(myCount.icrement())
+// console.log(myCount.icrement())
+
+// Two Sum (classic)
+
+// nums = [2, 7, 11, 15], target = 9
+// Output: [0,1]  // Because nums[0] + nums[1] = 2 + 7 = 9
+
+function findSum(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+}
+// console.log(findSum([2, 7, 11, 15],9))
+
+// Remove Duplicates from Array
+function removeDupliWithSet(arr) {
+  const map = new Set(arr);
+  console.log(map);
+}
+// removeDupliWithSet([1,2,2,3,4,4,5])
+
+function removeDupliWithTwoPointer(arr) {
+  if (arr.length === 0) return [];
+  let p = 0;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] != arr[p]) {
+      p++;
+      arr[p] = arr[i];
+    }
+  }
+  return arr.slice(0,p+1)
+}
+// console.log(removeDupliWithTwoPointer([1, 2, 2, 3, 4, 4, 5]))
+
+// Reverse an Array (in-place)
+function reverArrayWithMethod(arr){
+return arr.reverse()
+}
+
+// console.log(reverArrayWithMethod([12,2,3,4]))
+
+function reverseArrayWithPointer(arr){
+  let left = 0;
+  let right = arr.length-1;
+
+  for(let i=0;i<arr.length/2;i++){
+    let temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+    left++;
+    right--
+  } 
+  console.log(arr)
+}
+reverseArrayWithPointer([10,12,13,14,15,16,18])

@@ -21,3 +21,5 @@ const age = 40; // value should initialize during declare varialbe and can not m
 // age = 60; // can not do this
 // const age = 90  // we can not re-declare
 
+//****************************************************************************************************/
+
