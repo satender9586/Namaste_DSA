@@ -307,3 +307,55 @@ function DeepClone(){
 
 }
 // DeepClone()
+
+// check . Palindrome String with reverse method
+
+function CheckPalindrome(str){
+  if(str.length===0) return false
+  let updateStr = str.toLowerCase().replace(" ","");
+  let newStr = "";
+  for(let i=updateStr.length-1;i>=0;i--){
+    newStr +=updateStr[i]
+  }
+ 
+  if(updateStr===newStr){
+    return true
+  }else{
+    return false
+  }
+
+}
+// console.log(CheckPalindrome("amma"))
+
+
+// Find the first character that  repeate 
+
+function FirstRepeatedChar(str){
+  const obj = {};
+  for(let i=0;i<str.length;i++){
+    if(!obj[str[i]]){
+      obj[str[i]]=1
+    }else{
+      obj[str[i]]=obj[str[i]]+1
+      return str[i]
+    }
+  }
+}
+// console.log(FirstRepeatedChar("swwiss"))
+
+// Find the first character that  does not repeat in a string.
+function FirstNonRepeatedChar(str){
+  const obj = {};
+
+  for(let i=0;i<str.length;i++){
+    if(!obj[str[i]]){
+        obj[str[i]] = 1
+    }else{
+      obj[str[i]] = obj[str[i]]+1
+    }
+  }
+  const first = Object.keys(obj).find(key => obj[key] === 1) || -1;
+  return first
+
+}
+console.log(FirstNonRepeatedChar("redivider"))
