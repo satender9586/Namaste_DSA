@@ -358,4 +358,21 @@ function FirstNonRepeatedChar(str){
   return first
 
 }
-console.log(FirstNonRepeatedChar("redivider"))
+// console.log(FirstNonRepeatedChar("redivider"))
+
+// . Longest Word in a Sentence
+// Input: "I am preparing for frontend interviews"
+
+// Output: "interviews"
+
+function FindLondWord(str){
+  const newStr = str.split(" ");
+  let long = newStr[0]
+  for(let i=0;i<newStr.length;i++){
+    if(newStr[i].length>long.length){
+      long = newStr[i]
+    }
+  }
+  return long;
+}
+// console.log(FindLondWord("I am preparing for frontend interviews"))
