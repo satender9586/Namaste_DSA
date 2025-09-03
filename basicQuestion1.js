@@ -270,4 +270,40 @@ function reverseArrayWithPointer(arr){
   } 
   console.log(arr)
 }
-reverseArrayWithPointer([10,12,13,14,15,16,18])
+// reverseArrayWithPointer([10,12,13,14,15,16,18])
+
+// Move Zeroes to End
+
+// 👉 Input: [0,1,0,3,12] → Output: [1,3,12,0,0]
+
+function MoveZeroes(arr){
+    let p=0;
+    console.log(p)
+    for(let i=0; i<arr.length; i++){
+      if(arr[i]==0){
+        arr[i]=arr[i+1]
+        p++
+      }
+    } 
+    arr.splice(1,p)
+
+    for(let i=0;i<p;i++){
+      arr.push(0)
+    }
+    return arr
+}
+
+// Deep Clone an Object
+
+function DeepClone(){
+  const obj = {name:"amit",age:20, hobbies:{game:"cricket",study:"anime"}}
+  // const newObj = {...obj}
+  // const newObj = Object.assign(obj)
+  const newObj = JSON.parse(JSON.stringify(obj))
+  newObj.gender = "Male"
+  newObj.hobbies.team = "India"
+  console.log(obj)
+  console.log(newObj)
+
+}
+// DeepClone()
