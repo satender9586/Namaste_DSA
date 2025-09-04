@@ -25,3 +25,27 @@ const age = 40; // value should initialize during declare varialbe and can not m
 
 // DataType : Datatype is way to catogarise variable like string boolean number etc, javscript is
 // loose type of language there is no type stytem in javascirpt, 
+
+// primitive (number , Boolean, String, null, undefined, Symbol, bigInt)
+// non-primitive (Array, Object, function)
+
+// primitives
+let myRollNo = 1234; // number
+let isLoggedIn = true // Boolean
+let myName = "Satender Kumar" // string
+let temp = null // null
+let lastname = undefined; // undefined
+let mySecretCode = Symbol("12345") // symbol
+let myCryptoNumber = 2342424424242424n // bigInt
+
+// primitive data type are store in stake, means when we copy of any value to anoter variable
+// copy store of other variable, when we can in copy variable then value will change
+
+// reference :  they store refrence of variables not value
+
+const obj = {
+    firstName :"Satender",
+    age : 60
+}
+
+console.log(typeof myCryptoNumber)
