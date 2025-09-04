@@ -376,3 +376,19 @@ function FindLondWord(str){
   return long;
 }
 // console.log(FindLondWord("I am preparing for frontend interviews"))
+
+// Find Missing Number
+
+// 👉 Given an array containing n distinct numbers taken from 0,1,2,…,n, find the missing number.
+// Input: [9,6,4,2,3,5,7,0,1] → Output: 8
+
+function FindMissing(arr){
+  let n= arr.length;
+  let total = (n * (n+1)/2)
+  let totalofArray = 0
+  for(let i=0;i<arr.length;i++){
+    totalofArray = totalofArray + arr[i]
+  }
+  return total - totalofArray
+}
+console.log(FindMissing([9,6,4,2,3,5,7,0,1]))

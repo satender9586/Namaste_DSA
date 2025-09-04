@@ -23,3 +23,5 @@ const age = 40; // value should initialize during declare varialbe and can not m
 
 //****************************************************************************************************/
 
+// DataType : Datatype is way to catogarise variable like string boolean number etc, javscript is
+// loose type of language there is no type stytem in javascirpt, 
