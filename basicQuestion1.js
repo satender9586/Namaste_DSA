@@ -391,4 +391,34 @@ function FindMissing(arr){
   }
   return total - totalofArray
 }
-console.log(FindMissing([9,6,4,2,3,5,7,0,1]))
+// console.log(FindMissing([9,6,4,2,3,5,7,0,1]))
+
+// Recursion – Factorial of a Number
+
+// 👉 Write a recursive function to calculate factorial.
+
+// Input: 5 → Output: 120
+
+// Object – Group By Property
+
+// 👉 Write a function to group an array of objects by a proper
+
+function GroupByProperty(arr){
+  const obj = {}
+
+  for(let value of arr){
+    if(!obj[value.role]){
+        obj[value.role] = []
+    }
+    if(obj[value.role]){
+      obj[value.role].push(value)
+    }
+  }
+return obj
+}
+const data = [
+  { name: "Alice", role: "dev" },
+  { name: "Bob", role: "manager" },
+  { name: "Charlie", role: "dev" }
+];
+console.log(GroupByProperty(data))
