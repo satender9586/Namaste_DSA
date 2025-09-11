@@ -12,4 +12,23 @@ function removeDuplidate(arr){
     return arr
 }
 
-console.log(removeDuplidate([1,1,2,2,4,4,5,5]))
+let arr =[1,5,2,6,4,4,5,5]
+
+// console.log(removeDuplidate(arr))
+
+function removeSecondWay(arr){
+    arr.sort()
+    if(arr.length == 0) return []
+    let p=0;
+    for(let i=1;i<arr.length;i++){
+        if(arr[p] !== arr[i]){
+            p++
+            arr[p]=arr[i]
+        }
+    }
+    arr.length=p+1
+    return arr
+}
+console.log(removeSecondWay(arr))
+
+

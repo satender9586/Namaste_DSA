@@ -1,3 +1,4 @@
+
 // Basic to Advance javascirpt
 // Variables : variable is name of memory location where we store something and use it later across the scope of program
 // there is thee way to create variables in js var let const
@@ -48,4 +49,6 @@ const obj = {
     age : 60
 }
 
-console.log(typeof myCryptoNumber)
+const arr = ["raju","amit",44,["santday"],{name:"ja"}]
+
+// Strict mode : strict mode is feature of javscirpt which apply some rule in js
