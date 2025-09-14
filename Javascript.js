@@ -60,7 +60,9 @@ const age = 40; // value should initialize during declare varialbe and can not m
 
 const myIncome = 360000
 // console.log(Math)
-console.log(Math.abs(myIncome))
+// console.log(Math.abs(myIncome))
+
+
 
 
 
