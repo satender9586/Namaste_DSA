@@ -66,9 +66,7 @@ function groupByage(arr){
         if(!obj[arr[i].age]){
             obj[arr[i].age]=[]
         }
-       
             obj[arr[i].age].push(arr[i])  
-
     }
     console.log(obj)
 }
